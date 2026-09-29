@@ -1,0 +1,1858 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;650;700&family=Manrope:wght@500;600;700;800&display=swap");
+#estuda-app {
+  color-scheme: light;
+  --em-bg: light-dark(#f7f8fc, #14151d);
+  --em-surface: light-dark(#ffffff, #1c1d28);
+  --em-ink: light-dark(#242337, #f4f2fc);
+  --em-muted: light-dark(#77768b, #a7a7bd);
+  --em-line: light-dark(#eeedf4, #303140);
+  --em-purple: light-dark(#7751e8, #b19aff);
+  --em-on: light-dark(#ffffff, #20173d);
+  --em-tint: light-dark(#f1edff, #302744);
+  --em-green: light-dark(#68b932, #92cf68);
+  --em-green-bg: light-dark(#eef7e8, #263724);
+  --em-gold: light-dark(#aa7013, #f3c668);
+  --em-gold-bg: light-dark(#fff7df, #3b3020);
+  background: var(--em-bg);
+  color: var(--em-ink);
+  font:
+    14px/1.5 "DM Sans",
+    system-ui,
+    sans-serif;
+  min-height: 820px;
+  padding: 0;
+  width: 100%;
+}
+#estuda-app[data-theme="dark"] {
+  color-scheme: dark;
+}
+#estuda-app * {
+  box-sizing: border-box;
+}
+#estuda-app button,
+#estuda-app input {
+  font: inherit;
+}
+#estuda-app button {
+  cursor: inherit;
+  color: inherit;
+}
+#estuda-app svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.8;
+  flex-shrink: 0;
+}
+#estuda-app h1,
+#estuda-app h2,
+#estuda-app h3,
+#estuda-app p {
+  margin: 0;
+}
+#estuda-app .em-shell {
+  max-width: 1380px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 204px minmax(0, 1fr);
+  min-height: 820px;
+}
+#estuda-app .em-rail {
+  border-right: 1px solid var(--em-line);
+  padding: 34px 17px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  background: var(--em-surface);
+}
+#estuda-app .em-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font:
+    800 26px Manrope,
+    sans-serif;
+  letter-spacing: -1.5px;
+  padding: 0 12px;
+}
+#estuda-app .em-logo-mark {
+  display: grid;
+  place-items: center;
+  background: var(--em-purple);
+  color: var(--em-on);
+  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  transform: rotate(-8deg);
+}
+#estuda-app .em-logo-mark svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.5;
+}
+#estuda-app .em-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+#estuda-app .em-nav button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 46px;
+  border: 0;
+  background: transparent;
+  border-radius: 9px;
+  color: var(--em-muted);
+  padding: 11px 13px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+}
+#estuda-app .em-nav button.em-active {
+  background: var(--em-tint);
+  color: var(--em-purple);
+}
+#estuda-app .em-nav button span:last-child {
+  margin-left: auto;
+  font-size: 11px;
+  background: var(--em-purple);
+  color: var(--em-on);
+  border-radius: 5px;
+  padding: 1px 5px;
+}
+#estuda-app .em-rail-foot {
+  margin-top: auto;
+  padding: 0 12px;
+  color: var(--em-muted);
+  font-size: 11px;
+}
+#estuda-app .em-main-shell {
+  min-width: 0;
+}
+#estuda-app .em-top {
+  min-height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 34px;
+  border-bottom: 1px solid var(--em-line);
+  background: var(--em-surface);
+}
+#estuda-app .em-greeting {
+  font-size: 13px;
+  color: var(--em-muted);
+}
+#estuda-app .em-greeting strong {
+  color: var(--em-ink);
+  font-weight: 650;
+}
+#estuda-app .em-top-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#estuda-app .em-wallet {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--em-gold);
+  background: var(--em-gold-bg);
+  padding: 8px 12px;
+  border-radius: 9px;
+}
+#estuda-app .em-theme {
+  border: 1px solid var(--em-line);
+  background: var(--em-surface);
+  border-radius: 50%;
+  height: 38px;
+  width: 38px;
+  display: grid;
+  place-items: center;
+}
+#estuda-app .em-avatar-small {
+  display: grid;
+  place-items: center;
+  background: var(--em-tint);
+  color: var(--em-purple);
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  font-weight: 700;
+}
+#estuda-app .em-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 244px;
+  gap: 28px;
+  padding: 30px 32px 36px;
+}
+#estuda-app .em-center {
+  min-width: 0;
+}
+#estuda-app .em-title-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+#estuda-app h1 {
+  font:
+    800 32px/1.15 Manrope,
+    sans-serif;
+  letter-spacing: -1.3px;
+}
+#estuda-app .em-subtitle {
+  color: var(--em-muted);
+  font-size: 13px;
+}
+#estuda-app .em-create {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 0;
+  background: var(--em-purple);
+  color: var(--em-on);
+  border-radius: 8px;
+  padding: 10px 12px;
+  min-height: 40px;
+  font-weight: 650;
+  font-size: 12px;
+  white-space: nowrap;
+}
+#estuda-app .em-tabs {
+  display: flex;
+  gap: 22px;
+  border-bottom: 1px solid var(--em-line);
+  margin: 25px 0 21px;
+}
+#estuda-app .em-tabs button {
+  position: relative;
+  border: 0;
+  background: transparent;
+  padding: 0 0 13px;
+  min-height: 36px;
+  font-size: 12px;
+  font-weight: 650;
+  color: var(--em-muted);
+}
+#estuda-app .em-tabs button[aria-selected="true"] {
+  color: var(--em-purple);
+}
+#estuda-app .em-tabs button[aria-selected="true"]:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  height: 3px;
+  border-radius: 3px;
+  left: 0;
+  right: 0;
+  background: var(--em-purple);
+}
+#estuda-app .em-focus {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--em-tint);
+  border: 1px solid color-mix(in srgb, var(--em-purple) 13%, transparent);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 25px;
+}
+#estuda-app .em-focus-icon {
+  width: 37px;
+  height: 37px;
+  border-radius: 10px;
+  background: var(--em-surface);
+  color: var(--em-purple);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+#estuda-app .em-focus-copy {
+  flex: 1;
+  min-width: 0;
+}
+#estuda-app .em-focus strong {
+  font-size: 12px;
+}
+#estuda-app .em-focus small {
+  display: block;
+  font-size: 11px;
+  color: var(--em-muted);
+  margin-top: 2px;
+}
+#estuda-app .em-focus button {
+  border: 0;
+  border-radius: 7px;
+  background: var(--em-purple);
+  color: var(--em-on);
+  padding: 8px 10px;
+  font-weight: 650;
+  font-size: 11px;
+  min-height: 36px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+#estuda-app .em-focus button svg {
+  width: 14px;
+  height: 14px;
+}
+#estuda-app .em-section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 4px;
+}
+#estuda-app h2 {
+  font:
+    750 16px Manrope,
+    sans-serif;
+  letter-spacing: -0.35px;
+}
+#estuda-app .em-count {
+  font-size: 11px;
+  color: var(--em-muted);
+}
+#estuda-app .em-missions {
+  background: var(--em-surface);
+  border: 1px solid var(--em-line);
+  border-radius: 13px;
+  padding: 0 18px;
+  margin-top: 14px;
+}
+#estuda-app .em-mission {
+  padding: 21px 0 19px;
+  border-bottom: 1px solid var(--em-line);
+}
+#estuda-app .em-mission:last-child {
+  border-bottom: 0;
+}
+#estuda-app .em-mission-head {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+#estuda-app .em-mission-icon {
+  height: 43px;
+  width: 43px;
+  display: grid;
+  place-items: center;
+  background: var(--em-tint);
+  border-radius: 11px;
+  flex-shrink: 0;
+  font-size: 24px;
+}
+#estuda-app .em-mission-text {
+  min-width: 0;
+  flex: 1;
+}
+#estuda-app .em-subject {
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 1px;
+  color: var(--em-purple);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+#estuda-app .em-mission h3 {
+  font:
+    750 14px/1.3 Manrope,
+    sans-serif;
+  letter-spacing: -0.25px;
+}
+#estuda-app .em-mission p {
+  font-size: 11px;
+  color: var(--em-muted);
+  margin-top: 4px;
+}
+#estuda-app .em-prize {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--em-purple);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+#estuda-app .em-star {
+  width: 28px;
+  height: 28px;
+  background: var(--em-purple);
+  color: var(--em-on);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+#estuda-app .em-star svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  stroke-width: 0;
+}
+#estuda-app .em-prize small {
+  display: block;
+  font-size: 9px;
+  color: var(--em-muted);
+  font-weight: 500;
+}
+#estuda-app .em-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 17px;
+}
+#estuda-app .em-fraction {
+  font-size: 10px;
+  color: var(--em-muted);
+  min-width: 27px;
+}
+#estuda-app .em-progress {
+  height: 7px;
+  background: var(--em-line);
+  border-radius: 9px;
+  flex: 1;
+  overflow: hidden;
+}
+#estuda-app .em-progress span {
+  display: block;
+  height: 100%;
+  border-radius: 9px;
+  background: var(--em-green);
+}
+#estuda-app .em-plus {
+  font-size: 10px;
+  background: transparent;
+  border: 1px solid var(--em-line);
+  color: var(--em-muted);
+  border-radius: 6px;
+  min-height: 27px;
+  min-width: 27px;
+  display: grid;
+  place-items: center;
+}
+#estuda-app .em-plus svg {
+  width: 13px;
+  height: 13px;
+}
+#estuda-app .em-week-mission .em-mission-icon {
+  background: var(--em-gold-bg);
+}
+#estuda-app .em-week-mission .em-subject {
+  color: var(--em-gold);
+}
+#estuda-app .em-week-block {
+  margin-top: 25px;
+}
+#estuda-app .em-side {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+#estuda-app .em-panel {
+  padding: 19px;
+  background: var(--em-surface);
+  border: 1px solid var(--em-line);
+  border-radius: 13px;
+}
+#estuda-app .em-profile-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#estuda-app .em-avatar {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--em-tint);
+  color: var(--em-purple);
+  font:
+    800 24px Manrope,
+    sans-serif;
+}
+#estuda-app .em-level-badge {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  border: 3px solid var(--em-surface);
+  background: var(--em-purple);
+  color: var(--em-on);
+  font:
+    700 9px "DM Sans",
+    sans-serif;
+  min-width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+#estuda-app .em-person-name {
+  font-weight: 750;
+  font-size: 15px;
+}
+#estuda-app .em-level-name {
+  font-size: 11px;
+  color: var(--em-muted);
+  margin-top: 2px;
+}
+#estuda-app .em-xp-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  margin-bottom: 7px;
+}
+#estuda-app .em-xp-label span:last-child {
+  color: var(--em-purple);
+  font-weight: 650;
+}
+#estuda-app .em-xpbar {
+  height: 7px;
+  background: var(--em-tint);
+  border-radius: 8px;
+  overflow: hidden;
+}
+#estuda-app .em-xpbar span {
+  display: block;
+  height: 100%;
+  width: 65%;
+  background: var(--em-purple);
+  border-radius: 8px;
+}
+#estuda-app .em-help {
+  font-size: 10px;
+  color: var(--em-muted);
+  margin-top: 9px;
+}
+#estuda-app .em-week {
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+#estuda-app .em-week div {
+  text-align: center;
+  font-size: 9px;
+  color: var(--em-muted);
+  flex: 1;
+}
+#estuda-app .em-week i {
+  font-style: normal;
+  display: grid;
+  place-items: center;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: var(--em-line);
+  margin: 0 auto 6px;
+}
+#estuda-app .em-week .done i {
+  background: var(--em-green-bg);
+  color: var(--em-green);
+}
+#estuda-app .em-week .now i {
+  border: 1.5px solid var(--em-purple);
+  background: var(--em-tint);
+  color: var(--em-purple);
+}
+#estuda-app .em-reward-icon {
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-items: center;
+  background: var(--em-gold-bg);
+  border-radius: 13px;
+  font-size: 29px;
+  margin: 16px 0 10px;
+}
+#estuda-app .em-reward-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 650;
+}
+#estuda-app .em-reward-line span:last-child {
+  font-size: 10px;
+  color: var(--em-gold);
+}
+#estuda-app .em-link {
+  border: 0;
+  background: transparent;
+  color: var(--em-purple);
+  padding: 0;
+  font-size: 11px;
+  font-weight: 650;
+  min-height: 30px;
+  margin-top: 10px;
+}
+#estuda-app .em-achievement {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  color: var(--em-gold);
+  background: var(--em-gold-bg);
+  border-radius: 12px;
+}
+#estuda-app .em-achievement svg {
+  width: 27px;
+  height: 27px;
+}
+#estuda-app .em-achievement strong {
+  font-size: 11px;
+  display: block;
+}
+#estuda-app .em-achievement small {
+  font-size: 10px;
+}
+#estuda-app .em-mobile-xp,
+#estuda-app .em-bottom {
+  display: none;
+}
+#estuda-app .em-dialog {
+  position: relative;
+  background: var(--em-surface);
+  border: 1px solid var(--em-line);
+  border-radius: 10px;
+  padding: 16px;
+  margin: 18px 0;
+}
+#estuda-app .em-dialog label {
+  font-size: 12px;
+  display: block;
+}
+#estuda-app .em-dialog input {
+  display: block;
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--em-line);
+  background: var(--em-bg);
+  color: var(--em-ink);
+  border-radius: 7px;
+  padding: 9px;
+  margin: 8px 0 12px;
+}
+#estuda-app .em-dialog-actions {
+  display: flex;
+  gap: 8px;
+}
+#estuda-app .em-cancel {
+  background: transparent;
+  border: 1px solid var(--em-line);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+#estuda-app .em-live {
+  font-size: 11px;
+  color: var(--em-purple);
+  min-height: 17px;
+  margin-top: 14px;
+}
+#estuda-app [hidden] {
+  display: none !important;
+}
+@media (min-width: 1450px) {
+  #estuda-app .em-shell {
+    border-left: 1px solid var(--em-line);
+    border-right: 1px solid var(--em-line);
+  }
+}
+@media (max-width: 1120px) {
+  #estuda-app .em-shell {
+    grid-template-columns: 176px minmax(0, 1fr);
+  }
+  #estuda-app .em-body {
+    padding: 25px 22px;
+    gap: 21px;
+    grid-template-columns: minmax(0, 1fr) 215px;
+  }
+  #estuda-app .em-top {
+    padding: 19px 23px;
+  }
+  #estuda-app .em-panel {
+    padding: 16px;
+  }
+  #estuda-app h1 {
+    font-size: 29px;
+  }
+}
+@media (max-width: 900px) {
+  #estuda-app .em-shell {
+    grid-template-columns: 155px minmax(0, 1fr);
+  }
+  #estuda-app .em-body {
+    grid-template-columns: 1fr;
+  }
+  #estuda-app .em-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #estuda-app .em-rail {
+    padding: 27px 10px;
+  }
+  #estuda-app .em-nav button {
+    padding: 10px;
+    font-size: 12px;
+  }
+  #estuda-app .em-logo {
+    font-size: 24px;
+    padding: 0 5px;
+  }
+}
+@media (max-width: 620px) {
+  #estuda-app {
+    min-height: 0;
+  }
+  #estuda-app .em-shell {
+    display: block;
+    min-height: 0;
+  }
+  #estuda-app .em-rail,
+  #estuda-app .em-side {
+    display: none;
+  }
+  #estuda-app .em-top {
+    padding: 16px 19px;
+    min-height: 76px;
+  }
+  #estuda-app .em-greeting {
+    font-size: 11px;
+  }
+  #estuda-app .em-greeting strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 1px;
+  }
+  #estuda-app .em-top-right {
+    gap: 8px;
+  }
+  #estuda-app .em-wallet {
+    font-size: 12px;
+    padding: 7px 8px;
+  }
+  #estuda-app .em-wallet svg {
+    width: 16px;
+    height: 16px;
+  }
+  #estuda-app .em-avatar-small {
+    display: none;
+  }
+  #estuda-app .em-theme {
+    width: 34px;
+    height: 34px;
+  }
+  #estuda-app .em-body {
+    padding: 23px 19px 12px;
+    display: block;
+  }
+  #estuda-app h1 {
+    font-size: 31px;
+  }
+  #estuda-app .em-create {
+    padding: 10px;
+    font-size: 11px;
+  }
+  #estuda-app .em-create svg {
+    width: 15px;
+    height: 15px;
+  }
+  #estuda-app .em-subtitle {
+    font-size: 12px;
+  }
+  #estuda-app .em-tabs {
+    margin: 22px 0 17px;
+  }
+  #estuda-app .em-focus {
+    padding: 12px;
+    margin-bottom: 23px;
+    gap: 9px;
+  }
+  #estuda-app .em-focus small {
+    font-size: 10px;
+  }
+  #estuda-app .em-focus button {
+    font-size: 10px;
+  }
+  #estuda-app .em-missions {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    margin-top: 4px;
+  }
+  #estuda-app .em-mission {
+    padding: 20px 0;
+  }
+  #estuda-app .em-mission-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 23px;
+    border-radius: 10px;
+  }
+  #estuda-app .em-mission-head {
+    gap: 10px;
+  }
+  #estuda-app .em-mission h3 {
+    font-size: 13px;
+  }
+  #estuda-app .em-mission p {
+    font-size: 10px;
+  }
+  #estuda-app .em-prize {
+    gap: 5px;
+    font-size: 12px;
+  }
+  #estuda-app .em-star {
+    width: 24px;
+    height: 24px;
+  }
+  #estuda-app .em-week-block {
+    margin-top: 20px;
+  }
+  #estuda-app .em-mobile-xp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    margin-top: 18px;
+    color: var(--em-muted);
+  }
+  #estuda-app .em-mobile-xp .em-xpbar {
+    flex: 1;
+    height: 5px;
+  }
+  #estuda-app .em-bottom {
+    display: flex;
+    background: var(--em-surface);
+    border-top: 1px solid var(--em-line);
+    padding: 8px 10px 12px;
+    justify-content: space-around;
+  }
+  #estuda-app .em-bottom button {
+    min-height: 43px;
+    flex: 1;
+    border: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--em-muted);
+    font-size: 9px;
+  }
+  #estuda-app .em-bottom button.em-active {
+    color: var(--em-purple);
+    font-weight: 700;
+  }
+  #estuda-app .em-plus {
+    min-height: 32px;
+    min-width: 32px;
+  }
+  #estuda-app .em-title-line {
+    gap: 8px;
+  }
+}
+
+/* Application extensions keep the approved preview's tokens, type and layout. */
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #f7f8fc;
+}
+html[data-theme="dark"],
+html[data-theme="dark"] body {
+  background: #14151d;
+}
+body {
+  overflow-wrap: anywhere;
+}
+button,
+a,
+input,
+select {
+  touch-action: manipulation;
+}
+button,
+a {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #9978ff;
+  outline-offset: 3px;
+}
+#estuda-app {
+  min-height: 100vh;
+}
+#estuda-app .em-shell {
+  min-height: 100vh;
+}
+#estuda-app .em-purple {
+  color: var(--em-purple);
+}
+#estuda-app .em-nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 46px;
+  border: 0;
+  background: transparent;
+  border-radius: 9px;
+  color: var(--em-muted);
+  padding: 11px 13px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+}
+#estuda-app .em-nav a.em-active {
+  background: var(--em-tint);
+  color: var(--em-purple);
+}
+#estuda-app button {
+  cursor: pointer;
+}
+#estuda-app button:disabled {
+  cursor: not-allowed;
+}
+#estuda-app .em-avatar-small {
+  border: 0;
+  font-size: 19px;
+}
+#estuda-app .em-person-name {
+  overflow-wrap: anywhere;
+}
+#estuda-app .em-rail-foot .em-link {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+#estuda-app .em-link svg {
+  width: 14px;
+  height: 14px;
+}
+#estuda-app .em-tabs button[aria-pressed="true"] {
+  color: var(--em-purple);
+  border-bottom: 3px solid var(--em-purple);
+}
+#estuda-app .em-local-note {
+  font-size: 11px;
+  color: var(--em-muted);
+  margin-top: 36px;
+  border-top: 1px solid var(--em-line);
+  padding-top: 14px;
+}
+#estuda-app .em-icon-btn {
+  border: 1px solid var(--em-line);
+  background: transparent;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 36px;
+}
+#estuda-app .em-icon-btn svg {
+  width: 16px;
+  height: 16px;
+}
+#estuda-app .em-row-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+#estuda-app .em-row-actions .em-link {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  margin: 0;
+}
+#estuda-app .em-check {
+  font-size: 11px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: var(--em-muted);
+  margin-right: auto;
+}
+#estuda-app input[type="checkbox"] {
+  accent-color: var(--em-purple);
+  width: 16px;
+  height: 16px;
+}
+#estuda-app .em-plus {
+  width: 36px;
+  height: 36px;
+  color: var(--em-purple);
+}
+#estuda-app .em-fraction {
+  font-size: 11px;
+}
+#estuda-app .em-empty {
+  padding: 34px 18px;
+  text-align: center;
+  color: var(--em-muted);
+  border: 1px dashed var(--em-line);
+  border-radius: 12px;
+  margin-top: 20px;
+}
+#estuda-app .em-empty > svg {
+  color: var(--em-purple);
+  width: 30px;
+  height: 30px;
+  margin-bottom: 12px;
+}
+#estuda-app .em-empty h2 {
+  color: var(--em-ink);
+  margin-bottom: 8px;
+}
+#estuda-app .em-empty p {
+  font-size: 13px;
+}
+#estuda-app .em-empty button {
+  margin: 18px auto 0;
+}
+#estuda-app .em-onboard {
+  background: var(--em-tint);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 22px;
+}
+#estuda-app .em-onboard p {
+  font-size: 12px;
+  color: var(--em-muted);
+  margin: 8px 0 15px;
+}
+#estuda-app .em-summary {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin: 18px 0 24px;
+  padding: 18px 0;
+  border-top: 1px solid var(--em-line);
+  border-bottom: 1px solid var(--em-line);
+}
+#estuda-app .em-summary div {
+  display: flex;
+  flex-direction: column;
+}
+#estuda-app .em-summary strong {
+  font:
+    800 25px Manrope,
+    sans-serif;
+}
+#estuda-app .em-summary span {
+  font-size: 11px;
+  color: var(--em-muted);
+}
+#estuda-app .em-timer-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+#estuda-app .em-timer-controls output {
+  font-size: 18px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+#estuda-app .em-focus {
+  flex-wrap: wrap;
+}
+#estuda-app .em-spaced {
+  margin-top: 24px;
+}
+#estuda-app .em-subject-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+#estuda-app .em-subject-row > div {
+  flex: 1;
+}
+#estuda-app .em-subject-row h2 {
+  font-size: 14px;
+}
+#estuda-app .em-day-list {
+  margin-top: 24px;
+}
+#estuda-app .em-day-list ul,
+#estuda-app .em-history {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+}
+#estuda-app .em-day-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--em-line);
+  font-size: 12px;
+}
+#estuda-app .em-day-list small {
+  color: var(--em-muted);
+}
+#estuda-app .em-history li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--em-line);
+  font-size: 12px;
+}
+#estuda-app .em-history span {
+  color: var(--em-muted);
+  font-size: 11px;
+}
+#estuda-app .em-achievements {
+  display: grid;
+  gap: 15px;
+  margin-top: 25px;
+}
+#estuda-app .em-achievements p {
+  color: var(--em-muted);
+  font-size: 12px;
+  margin: 7px 0;
+}
+#estuda-app .em-achievements strong {
+  font-size: 11px;
+  color: var(--em-muted);
+}
+#estuda-app .em-unlocked {
+  border-color: var(--em-green);
+  background: var(--em-green-bg);
+}
+#estuda-app .em-unlocked strong {
+  color: var(--em-green);
+}
+#estuda-app .em-award-icon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 10px;
+}
+#estuda-app .em-modal {
+  width: min(460px, calc(100% - 32px));
+  max-height: 85dvh;
+  padding: 24px;
+  border: 1px solid var(--em-line);
+  border-radius: 16px;
+  background: var(--em-surface);
+  color: var(--em-ink);
+  box-shadow: 0 20px 80px #0004;
+  color-scheme: inherit;
+}
+#estuda-app .em-modal::backdrop {
+  background: #14151d80;
+}
+#estuda-app .em-modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+#estuda-app .em-modal label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+#estuda-app .em-modal input,
+#estuda-app .em-modal select {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 7px;
+  padding: 10px 12px;
+  border: 1px solid var(--em-line);
+  border-radius: 8px;
+  background: var(--em-bg);
+  color: var(--em-ink);
+  font: inherit;
+  font-size: 16px;
+}
+#estuda-app .em-fields {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 12px;
+}
+#estuda-app .em-dialog-actions {
+  margin-top: 20px;
+}
+#estuda-app .em-error {
+  background: var(--em-gold-bg);
+  color: var(--em-ink);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+  margin: 12px 0;
+}
+#estuda-app.em-loading {
+  padding: 48px 24px;
+  min-height: 100vh;
+}
+#estuda-app.em-loading p {
+  margin: 18px 0;
+}
+@media (max-width: 620px) {
+  #estuda-app .em-avatar-small {
+    display: grid;
+    width: 32px;
+    height: 32px;
+  }
+  #estuda-app .em-bottom {
+    position: sticky;
+    bottom: 0;
+    z-index: 5;
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+    gap: 2px;
+  }
+  #estuda-app .em-bottom a {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    min-height: 46px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--em-muted);
+    font-size: 9px;
+    text-decoration: none;
+  }
+  #estuda-app .em-bottom a.em-active {
+    color: var(--em-purple);
+    font-weight: 700;
+  }
+  #estuda-app .em-bottom a svg {
+    width: 20px;
+    height: 20px;
+  }
+  #estuda-app .em-main-shell {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+  #estuda-app .em-body {
+    flex: 1;
+    padding-bottom: 24px;
+  }
+  #estuda-app .em-row-actions {
+    gap: 10px;
+  }
+  #estuda-app .em-row-actions button,
+  #estuda-app .em-check {
+    min-height: 44px;
+  }
+  #estuda-app .em-prize {
+    font-size: 11px;
+  }
+  #estuda-app .em-prize .em-star {
+    display: none;
+  }
+  #estuda-app .em-focus-copy {
+    min-width: 140px;
+  }
+  #estuda-app .em-timer-controls {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  #estuda-app .em-timer-controls button {
+    min-height: 40px;
+  }
+  #estuda-app .em-summary span {
+    font-size: 10px;
+  }
+  #estuda-app .em-top {
+    padding: 16px 14px;
+  }
+  #estuda-app .em-body {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  #estuda-app .em-modal {
+    padding: 20px;
+  }
+  #estuda-app .em-section-head {
+    flex-wrap: wrap;
+  }
+}
+
+/* Stable application frame: only the content pane scrolls between routes. */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+#estuda-app {
+  --em-muted: light-dark(#66647a, #b0afc4);
+  height: 100dvh;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+#estuda-app .em-shell {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  height: 100%;
+  min-height: 0;
+  grid-template-columns: 216px minmax(0, 1fr);
+  border: 0;
+}
+#estuda-app .em-rail {
+  min-height: 0;
+  overflow-y: auto;
+  padding: 30px 18px 24px;
+  gap: 34px;
+  scrollbar-gutter: stable;
+}
+#estuda-app .em-main-shell {
+  display: grid;
+  grid-template-rows: 84px minmax(0, 1fr);
+  min-height: 0;
+  min-width: 0;
+}
+#estuda-app .em-top {
+  height: 84px;
+  min-height: 0;
+  padding: 18px 32px;
+  gap: 16px;
+}
+#estuda-app .em-top-right {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+#estuda-app .em-greeting {
+  min-width: 0;
+}
+#estuda-app .em-greeting strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 360px;
+}
+#estuda-app .em-body {
+  min-width: 0;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 264px;
+  gap: 28px;
+  align-content: start;
+  align-items: start;
+  padding: 30px 32px 40px;
+}
+#estuda-app .em-side {
+  display: flex;
+  min-width: 0;
+  align-self: start;
+}
+#estuda-app .em-title-line {
+  min-height: 44px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+#estuda-app .em-title-line h1 {
+  outline: none;
+}
+#estuda-app .em-live {
+  height: 34px;
+  min-height: 34px;
+  line-height: 17px;
+  margin: 10px 0;
+  overflow: auto;
+  font-size: 12px;
+}
+#estuda-app .em-exit {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  border: 1px solid var(--em-line);
+  border-radius: 8px;
+  min-height: 38px;
+  padding: 8px 11px;
+  font-size: 12px;
+  color: var(--em-muted);
+}
+#estuda-app .em-exit svg {
+  width: 16px;
+  height: 16px;
+}
+#estuda-app .em-account-label {
+  font-size: 11px;
+  color: var(--em-muted);
+}
+#estuda-app .em-help,
+#estuda-app .em-mission p,
+#estuda-app .em-focus small {
+  font-size: 12px;
+  line-height: 1.5;
+}
+#estuda-app .em-subject {
+  font-size: 11px;
+}
+#estuda-app .em-prize small {
+  font-size: 11px;
+}
+#estuda-app .em-check {
+  font-size: 12px;
+}
+#estuda-app .em-modal .em-delete-copy p {
+  margin: 12px 0;
+  color: var(--em-muted);
+  font-size: 13px;
+}
+#estuda-app .em-import-note {
+  background: var(--em-tint);
+  border-radius: 12px;
+  padding: 18px;
+  margin: 0 0 20px;
+}
+#estuda-app .em-import-note p {
+  font-size: 12px;
+  color: var(--em-muted);
+  margin-top: 8px;
+}
+#estuda-app .em-import-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+}
+#estuda-app .em-import-consent input {
+  width: 18px;
+  height: 18px;
+  min-height: 18px;
+  margin: 2px 0;
+  flex-shrink: 0;
+}
+#estuda-app.em-loading {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 48px;
+}
+#estuda-app .em-empty {
+  background: var(--em-surface);
+  border-style: solid;
+  padding: 40px 24px;
+}
+#estuda-app .em-dialog-actions button {
+  min-height: 42px;
+}
+
+/* Entry and account forms share the approved product palette and typography. */
+#estuda-app.em-entry {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+#estuda-app .em-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 44px;
+}
+#estuda-app .em-entry-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 72px;
+  align-items: center;
+  width: 100%;
+  max-width: 1180px;
+  margin: auto;
+  padding: 40px 44px 60px;
+}
+#estuda-app .em-eyebrow {
+  color: var(--em-purple);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  display: block;
+  margin-bottom: 20px;
+}
+#estuda-app .em-entry-story h1 {
+  font-size: clamp(38px, 4.8vw, 64px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  max-width: 600px;
+}
+#estuda-app .em-entry-story h1 span {
+  color: var(--em-purple);
+}
+#estuda-app .em-entry-story > p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--em-muted);
+  max-width: 420px;
+  margin-top: 22px;
+}
+#estuda-app .em-entry-points {
+  display: grid;
+  gap: 18px;
+  margin-top: 34px;
+}
+#estuda-app .em-entry-points > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+#estuda-app .em-entry-points svg {
+  color: var(--em-green);
+  width: 22px;
+  height: 22px;
+}
+#estuda-app .em-entry-card {
+  background: var(--em-surface);
+  border: 1px solid var(--em-line);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 16px 50px color-mix(in srgb, var(--em-ink) 4%, transparent);
+  min-width: 0;
+}
+#estuda-app .em-entry-symbol {
+  display: grid;
+  place-items: center;
+  background: var(--em-tint);
+  color: var(--em-purple);
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  margin-bottom: 22px;
+}
+#estuda-app .em-entry-card h2 {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+#estuda-app .em-entry-card > p {
+  font-size: 13px;
+  color: var(--em-muted);
+  margin: 10px 0 22px;
+  line-height: 1.7;
+}
+#estuda-app .em-entry-card label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 17px 0;
+}
+#estuda-app .em-entry-card input {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--em-line);
+  border-radius: 9px;
+  background: var(--em-bg);
+  color: var(--em-ink);
+  padding: 10px 12px;
+  margin-top: 7px;
+  font: inherit;
+  font-size: 16px;
+}
+#estuda-app .em-entry-card input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+#estuda-app .em-enter {
+  width: 100%;
+  min-height: 46px;
+  font-size: 13px;
+  margin-top: 22px;
+  gap: 12px;
+}
+#estuda-app .em-entry-privacy {
+  display: flex;
+  gap: 9px;
+  color: var(--em-muted);
+  margin-top: 24px;
+  border-top: 1px solid var(--em-line);
+  padding-top: 18px;
+}
+#estuda-app .em-entry-privacy svg {
+  width: 17px;
+  height: 17px;
+  margin-top: 2px;
+}
+#estuda-app .em-entry-privacy p {
+  font-size: 11px;
+  line-height: 1.7;
+}
+#estuda-app .em-auth-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+#estuda-app .em-auth-links .em-link {
+  font-size: 11px;
+  min-height: 40px;
+}
+#estuda-app .em-entry-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 44px;
+  font-size: 11px;
+  color: var(--em-muted);
+  border-top: 1px solid var(--em-line);
+}
+#estuda-app .em-setup-note {
+  background: var(--em-gold-bg);
+  color: var(--em-ink);
+  padding: 14px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+#estuda-app .em-setup-note strong {
+  font-size: 12px;
+}
+#estuda-app .em-setup-note p {
+  font-size: 11px;
+  line-height: 1.7;
+  margin-top: 6px;
+}
+#estuda-app .em-auth-success {
+  color: var(--em-ink);
+  background: var(--em-green-bg);
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+#estuda-app .em-account-email {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 1120px) {
+  #estuda-app .em-shell {
+    grid-template-columns: 192px minmax(0, 1fr);
+  }
+  #estuda-app .em-body {
+    grid-template-columns: minmax(0, 1fr) 224px;
+    gap: 22px;
+    padding: 26px 24px 36px;
+  }
+  #estuda-app .em-top {
+    padding: 18px 24px;
+  }
+  #estuda-app .em-rail {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  #estuda-app .em-entry-main {
+    gap: 40px;
+    grid-template-columns: minmax(0, 1fr) 390px;
+  }
+  #estuda-app .em-entry-card {
+    padding: 26px;
+  }
+}
+@media (max-width: 980px) {
+  #estuda-app .em-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  #estuda-app .em-side {
+    display: none;
+  }
+  #estuda-app .em-account-label {
+    display: none;
+  }
+  #estuda-app .em-mobile-xp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    margin-top: 18px;
+    color: var(--em-muted);
+  }
+  #estuda-app .em-mobile-xp .em-xpbar {
+    flex: 1;
+  }
+  #estuda-app .em-entry-main {
+    grid-template-columns: minmax(0, 1fr) 370px;
+    gap: 28px;
+    padding: 28px;
+  }
+  #estuda-app .em-entry-header {
+    padding: 24px 28px;
+  }
+}
+@media (max-width: 720px) {
+  #estuda-app .em-entry-main {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    gap: 30px;
+    padding: 18px 20px 36px;
+  }
+  #estuda-app .em-entry-story h1 {
+    font-size: 34px;
+    letter-spacing: -1.2px;
+  }
+  #estuda-app .em-entry-story h1 br {
+    display: none;
+  }
+  #estuda-app .em-entry-story > p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 14px;
+  }
+  #estuda-app .em-entry-points {
+    display: none;
+  }
+  #estuda-app .em-entry-card {
+    padding: 24px;
+    border-radius: 16px;
+  }
+  #estuda-app .em-eyebrow {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  #estuda-app .em-entry-header {
+    padding: 22px 20px;
+  }
+  #estuda-app .em-entry-footer {
+    padding: 18px 20px;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #estuda-app .em-entry-card h2 {
+    font-size: 23px;
+  }
+}
+@media (max-width: 620px) {
+  #estuda-app .em-shell {
+    display: block;
+    height: 100%;
+    min-height: 0;
+  }
+  #estuda-app .em-rail {
+    display: none;
+  }
+  #estuda-app .em-main-shell {
+    height: 100%;
+    min-height: 0;
+    display: grid;
+    grid-template-rows: 76px minmax(0, 1fr) auto;
+  }
+  #estuda-app .em-top {
+    height: 76px;
+    min-height: 0;
+    padding: 14px 16px;
+    gap: 8px;
+  }
+  #estuda-app .em-top-right {
+    gap: 7px;
+  }
+  #estuda-app .em-greeting strong {
+    font-size: 13px;
+    max-width: 125px;
+  }
+  #estuda-app .em-greeting > span {
+    display: none;
+  }
+  #estuda-app .em-exit {
+    border: 0;
+    min-width: 28px;
+    min-height: 38px;
+    padding: 5px;
+  }
+  #estuda-app .em-exit span {
+    display: none;
+  }
+  #estuda-app .em-wallet {
+    font-size: 11px;
+    padding: 7px;
+    white-space: nowrap;
+  }
+  #estuda-app .em-theme {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+  #estuda-app .em-avatar-small {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+  #estuda-app .em-body {
+    display: block;
+    min-height: 0;
+    min-width: 0;
+    padding: 24px 16px 30px;
+    scrollbar-gutter: stable;
+  }
+  #estuda-app .em-side {
+    display: none;
+  }
+  #estuda-app .em-bottom {
+    position: static;
+    min-width: 0;
+    padding: 8px 8px max(10px, env(safe-area-inset-bottom));
+    margin: 0;
+    background: var(--em-surface);
+  }
+  #estuda-app .em-title-line h1 {
+    font-size: 29px;
+  }
+  #estuda-app .em-row-actions {
+    gap: 6px;
+  }
+  #estuda-app .em-focus small {
+    font-size: 11px;
+  }
+  #estuda-app .em-mission p {
+    font-size: 12px;
+  }
+  #estuda-app .em-live {
+    height: 34px;
+    min-height: 34px;
+    font-size: 11px;
+  }
+  #estuda-app .em-help {
+    font-size: 11px;
+  }
+  #estuda-app .em-check {
+    font-size: 11px;
+  }
+  #estuda-app.em-loading {
+    padding: 32px 20px;
+  }
+  #estuda-app .em-modal {
+    max-height: calc(100dvh - 40px);
+  }
+}
+
+.em-local-entry { margin: 22px 0; }
+.em-local-entry p { font-size: 12px; line-height: 1.5; margin-top: 10px; color: var(--muted); }
+
+@media (max-width: 760px) {
+  #estuda-app .em-greeting > .em-local-badge { display: block; font-size: 10px; margin-top: 3px; }
+}

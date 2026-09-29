@@ -1,0 +1,36 @@
+{
+  "name": "estuda",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@11.19.0",
+  "engines": {
+    "node": ">=22 <27",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3210",
+    "dev:local": "node scripts/local-server.mjs --dev",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 3210",
+    "test": "tsx --test tests/*.test.js tests/*.test.jsx",
+    "check": "tsc --noEmit",
+    "start:local": "node scripts/local-server.mjs"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.117.2",
+    "lucide-react": "^0.577.0",
+    "next": "16.3.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.14",
+    "happy-dom": "^20.14.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
